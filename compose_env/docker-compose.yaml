@@ -1,0 +1,23 @@
+services:
+  db:
+    # Replaced mysql:5.7 which doesn't publish ARM64 images for some tags.
+    # Use mysql:8.0 (has multi-arch support) or mariadb if you prefer.
+    image: mysql:8.0
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    env_file:
+      - ./config/db.env
+  wordpress:
+    depends_on:
+    - db
+    image: wordpress:latest
+    ports:
+    - "8000:80"
+    restart: always
+    env_file:
+      - ./config/wp.env
+   
+     
+volumes:
+    db_data: {}
