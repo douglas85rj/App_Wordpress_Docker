@@ -13,7 +13,6 @@ Aplicação de estudo/trabalho baseada em WordPress e banco MySQL, orquestrada c
 
 - Removida a chave `version` do `docker-compose.yaml` para evitar warnings.
 - Substituída a imagem `mysql:5.7` por `mysql:8.0` para garantir suporte multi-arch (Apple Silicon / arm64). Se você precisar manter `mysql:5.7`, veja a seção "Alternativas" abaixo.
-- Diagnóstico de erro ENOENT para um arquivo de imagem referenciado (`image/README/1761778666358.png`). O README sugere criar um placeholder se você encontrar esse erro localmente.
 
 ## Como rodar (macOS / Docker Desktop)
 
