@@ -2,6 +2,8 @@
 
 Aplicação de estudo/trabalho baseada em WordPress e banco MySQL, orquestrada com Docker Compose.
 
+![Estrutura do Projeto](Estrutura_projetoDocker.png)
+
 ## O que está incluso
 
 - Serviço `wordpress` usando a imagem `wordpress:latest` (porta 8000 no host mapeada para 80 no container).
